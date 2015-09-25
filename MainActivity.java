@@ -1,14 +1,12 @@
 package com.example.akh1l.tictactoe;
 
-import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.TextView;
-
 import java.util.Random;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
@@ -29,23 +27,23 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         //Initialisation of all the nine buttons using there id from the xml file and waiting for the button to be clicked
-        Button button1 = (Button) findViewById(R.id.button1);
+        ImageButton button1 = (ImageButton) findViewById(R.id.button1);
         button1.setOnClickListener(this);
-        Button button2 = (Button) findViewById(R.id.button2);
+        ImageButton button2 = (ImageButton) findViewById(R.id.button2);
         button2.setOnClickListener(this);
-        Button button3 = (Button) findViewById(R.id.button3);
+        ImageButton button3 = (ImageButton) findViewById(R.id.button3);
         button3.setOnClickListener(this);
-        Button button4 = (Button) findViewById(R.id.button4);
+        ImageButton button4 = (ImageButton) findViewById(R.id.button4);
         button4.setOnClickListener(this);
-        Button button5 = (Button) findViewById(R.id.button5);
+        ImageButton button5 = (ImageButton) findViewById(R.id.button5);
         button5.setOnClickListener(this);
-        Button button6 = (Button) findViewById(R.id.button6);
+        ImageButton button6 = (ImageButton) findViewById(R.id.button6);
         button6.setOnClickListener(this);
-        Button button7 = (Button) findViewById(R.id.button7);
+        ImageButton button7 = (ImageButton) findViewById(R.id.button7);
         button7.setOnClickListener(this);
-        Button button8 = (Button) findViewById(R.id.button8);
+        ImageButton button8 = (ImageButton) findViewById(R.id.button8);
         button8.setOnClickListener(this);
-        Button button9 = (Button) findViewById(R.id.button9);
+        ImageButton button9 = (ImageButton) findViewById(R.id.button9);
         button9.setOnClickListener(this);
     }
 
@@ -76,65 +74,140 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.button1:
                 if (playerIdentification == 1)
                     playersTurn(R.id.button1);
-                else
-                    display('O', R.id.button1);
+                else {
+                    ImageButton button1 = (ImageButton) findViewById(R.id.button1);
+                    if(win == 1)
+                    {
+                        button1.setImageResource(R.drawable.owhite);
+                    }
+                    else
+                    {
+                        button1.setImageResource(R.drawable.oblack);
+                    }
+                }
                 break;
             case R.id.button2:
                 if (playerIdentification == 1)
                     playersTurn(R.id.button2);
+                else{
+                    ImageButton button2 = (ImageButton) findViewById(R.id.button2);
+                    if(win == 1)
+                {
+                    button2.setImageResource(R.drawable.owhite);
+                }
                 else
-                    display('O', R.id.button2);
+                {
+                    button2.setImageResource(R.drawable.oblack);
+                }
+                }
                 break;
             case R.id.button3:
                 if (playerIdentification == 1)
                     playersTurn(R.id.button3);
-                else
-                    display('O', R.id.button3);
+                else{
+                    ImageButton button3 = (ImageButton) findViewById(R.id.button3);
+                    if(win == 1)
+                    {
+                        button3.setImageResource(R.drawable.owhite);
+                    }
+                    else
+                    {
+                        button3.setImageResource(R.drawable.oblack);
+                    }
+                }
                 break;
             case R.id.button4:
                 if (playerIdentification == 1)
                     playersTurn(R.id.button4);
-                else
-                    display('O', R.id.button4);
+                else{
+                    ImageButton button4 = (ImageButton) findViewById(R.id.button4);
+                    if(win == 1)
+                    {
+                        button4.setImageResource(R.drawable.owhite);
+                    }
+                    else
+                    {
+                        button4.setImageResource(R.drawable.oblack);
+                    }
+                }
                 break;
             case R.id.button5:
                 if (playerIdentification == 1)
                     playersTurn(R.id.button5);
-                else
-                    display('O', R.id.button5);
+                else{
+                    ImageButton button5 = (ImageButton) findViewById(R.id.button5);
+                    if(win == 1)
+                    {
+                        button5.setImageResource(R.drawable.owhite);
+                    }
+                    else
+                    {
+                        button5.setImageResource(R.drawable.oblack);
+                    }
+                }
                 break;
             case R.id.button6:
                 if (playerIdentification == 1)
                     playersTurn(R.id.button6);
-                else
-                    display('O', R.id.button6);
+                else{
+                    ImageButton button6 = (ImageButton) findViewById(R.id.button6);
+                    if(win == 1)
+                    {
+                        button6.setImageResource(R.drawable.owhite);
+                    }
+                    else
+                    {
+                        button6.setImageResource(R.drawable.oblack);
+                    }
+                }
                 break;
             case R.id.button7:
                 if (playerIdentification == 1)
                     playersTurn(R.id.button7);
-                else
-                    display('O', R.id.button7);
+                else{
+                    ImageButton button7 = (ImageButton) findViewById(R.id.button7);
+                    if(win == 1)
+                    {
+                        button7.setImageResource(R.drawable.owhite);
+                    }
+                    else
+                    {
+                        button7.setImageResource(R.drawable.oblack);
+                    }
+                }
                 break;
             case R.id.button8:
                 if (playerIdentification == 1)
                     playersTurn(R.id.button8);
-                else
-                    display('O', R.id.button8);
+                else{
+                    ImageButton button8 = (ImageButton) findViewById(R.id.button8);
+                    if(win == 1)
+                    {
+                        button8.setImageResource(R.drawable.owhite);
+                    }
+                    else
+                    {
+                        button8.setImageResource(R.drawable.oblack);
+                    }
+                }
                 break;
             case R.id.button9:
                 if (playerIdentification == 1)
                     playersTurn(R.id.button9);
-                else
-                    display('O', R.id.button9);
+                else{
+                    ImageButton button9 = (ImageButton) findViewById(R.id.button9);
+                    if(win == 1)
+                    {
+                        button9.setImageResource(R.drawable.owhite);
+                    }
+                    else
+                    {
+                        button9.setImageResource(R.drawable.oblack);
+                    }
+                }
                 break;
         }
 
-    }
-
-    //displays the character 'x' or 'o' when the button is pressed
-    public void display(char c, int id) {
-        TextView quantityTextView = (TextView) findViewById(id);
-        quantityTextView.setText("" + c);
     }
 
     //resets the board and variables when the restart button is pressed
@@ -146,9 +219,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         for (int i = 0; i < 9; i++) {
             playerOccupied[i] = 0;
             cpuOccupied[i] = 0;
-            display(' ', idArray[i]);
-            TextView winningLine = (TextView) findViewById(idArray[i]);
-            winningLine.setTextColor(Color.BLACK);
+            ImageButton button = (ImageButton) findViewById(idArray[i]);
+            button.setImageResource(R.drawable.blanktile);
+            //color was set back to black
         }
     }
 
@@ -161,7 +234,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             }
         }
         if (playerOccupied[idLocation] != 1 && cpuOccupied[idLocation] != 1) {  //to check if the pressed button is occupied
-            display('X', id);
+            ImageButton button = (ImageButton) findViewById(id);
+            button.setImageResource(R.drawable.xblack);
             playerOccupied[idLocation] = 1;  //setting that tile as players tile
             if (playerCheck() == false) {
                 if (cpuOccupiedCount < 4 && (win == 0))   //maximum tiles that can be occupied by the cpu && cpu has not won yet
@@ -208,8 +282,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     cpuOccupied[k] = 1;
                 }
             }
-        } else if (cpuPressed == 0 && win == 0) {
-            id = cpuBlock();
+       } else if (cpuPressed == 0 && win == 0) {
+           id = cpuBlock();
         }
         if (block == 0 && cpuPressed == 0) {
             specialBlock = superBlock();
@@ -251,7 +325,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             }
         }
         if (id != -1) {
-            Button button = (Button) findViewById(id);
+            ImageButton button = (ImageButton) findViewById(id);
             playerIdentification = 0;
             button.performClick();
             playerIdentification = 1;
@@ -281,8 +355,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     cpuScore++;
                     displayCpuScore(cpuScore);
                     for (int w = 0; w < 3; w++) {
-                        TextView winningLine = (TextView) findViewById(idArray[i + w * addToInc]);
-                        winningLine.setTextColor(Color.parseColor("#EEEEEE"));
+                        ImageButton button = (ImageButton) findViewById(idArray[i + w * addToInc]);
+                        button.setImageResource(R.drawable.owhite);
                     }
                     return id; //if not returned the control back, it continues to check for other rows or coloumns and results in a bug
                 } else if (cpuOccupied[i + 2 * addToInc] == 1 && cpuOccupied[i + addToInc] == 1 && (cpuOccupied[i] != 1 && playerOccupied[i] != 1)) {
@@ -293,8 +367,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     displayCpuScore(cpuScore);
                     win = 1;
                     for (int w = 0; w < 3; w++) {
-                        TextView winningLine = (TextView) findViewById(idArray[i + w * addToInc]);
-                        winningLine.setTextColor(Color.parseColor("#EEEEEE"));
+                        ImageButton button = (ImageButton) findViewById(idArray[i + w * addToInc]);
+                        button.setImageResource(R.drawable.owhite);
                     }
                     return id;
                 } else if (cpuOccupied[i] == 1 && cpuOccupied[i + 2 * addToInc] == 1 && (cpuOccupied[i + addToInc] != 1 && playerOccupied[i + addToInc] != 1)) {
@@ -305,8 +379,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     displayCpuScore(cpuScore);
                     win = 1;
                     for (int w = 0; w < 3; w++) {
-                        TextView winningLine = (TextView) findViewById(idArray[i + w * addToInc]);
-                        winningLine.setTextColor(Color.parseColor("#EEEEEE"));
+                        ImageButton button = (ImageButton) findViewById(idArray[i + w * addToInc]);
+                        button.setImageResource(R.drawable.owhite);
                     }
                     return id;
                 }
@@ -388,20 +462,20 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             for (int i = 0, rowCount = 0; rowCount < rowsToBeChecked; ) {
                 if (playerOccupied[i] == 1 && playerOccupied[i + addToInc] == 1 && playerOccupied[i + 2 * addToInc] == 1) {
                     for (int w = 0; w < 3; w++) {
-                        TextView winningLine = (TextView) findViewById(idArray[i + w * addToInc]);
-                        winningLine.setTextColor(Color.parseColor("#FF8566"));
+                        ImageButton button = (ImageButton) findViewById(idArray[i + w * addToInc]);
+                        button.setImageResource(R.drawable.xwhite);
                     }
                     return true; //if not returned the control back, it continues to check for other rows or coloumns and results in a bug
                 } else if (playerOccupied[i + 2 * addToInc] == 1 && playerOccupied[i + addToInc] == 1 && playerOccupied[i] == 1) {
                     for (int w = 0; w < 3; w++) {
-                        TextView winningLine = (TextView) findViewById(idArray[i + w * addToInc]);
-                        winningLine.setTextColor(Color.parseColor("#FF8566"));
+                        ImageButton button = (ImageButton) findViewById(idArray[i + w * addToInc]);
+                        button.setImageResource(R.drawable.xwhite);
                     }
                     return true;
                 } else if (playerOccupied[i] == 1 && playerOccupied[i + 2 * addToInc] == 1 && playerOccupied[i + addToInc] == 1) {
                     for (int w = 0; w < 3; w++) {
-                        TextView winningLine = (TextView) findViewById(idArray[i + w * addToInc]);
-                        winningLine.setTextColor(Color.parseColor("#FF8566"));
+                        ImageButton button = (ImageButton) findViewById(idArray[i + w * addToInc]);
+                        button.setImageResource(R.drawable.xwhite);
                     }
                     return true;
                 }
@@ -453,19 +527,19 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
         //another case to block when the cpu has already occupodied one tile
         else if (playerOccupied[1] == 1 && playerOccupied[3] == 1) {
-            id = idArray[0];    
+            id = idArray[0];           //idArray[2] also works
             cpuOccupied[0] = 1;
             cpuOccupiedCount++;
         } else if (playerOccupied[1] == 1 && playerOccupied[5] == 1) {
-            id = idArray[2];   
+            id = idArray[2];           //idArray[2] also works
             cpuOccupied[2] = 1;
             cpuOccupiedCount++;
         } else if (playerOccupied[5] == 1 && playerOccupied[7] == 1) {
-            id = idArray[8];     
+            id = idArray[8];           //idArray[2] also works
             cpuOccupied[8] = 1;
             cpuOccupiedCount++;
         } else if (playerOccupied[7] == 1 && playerOccupied[3] == 1) {
-            id = idArray[6];    
+            id = idArray[6];           //idArray[2] also works
             cpuOccupied[6] = 1;
             cpuOccupiedCount++;
         }
