@@ -6,70 +6,72 @@
     android:padding="5dp"
     tools:context=".MainActivity">
 
-<LinearLayout
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:layout_above="@+id/gridLayout"
-    android:layout_marginLeft="10dp"
-    android:layout_marginRight="10dp"
-    android:orientation="horizontal">
-    <Button
-        android:id="@+id/restartButton"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@android:color/transparent"
-        android:onClick="restart"
-        android:padding="0dp"
-        android:text="restart"
-        android:textColor="#FFFFFF"
-        android:textSize="15sp"/>
-
-    <TextView
-        android:id="@+id/cpuScoreText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="15dp"
-        android:layout_marginLeft="50dp"
-        android:layout_marginStart="58dp"
-        android:text="CPU:"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:textColor="@android:color/white"
-        android:textSize="15sp" />
-    <TextView
-        android:id="@+id/cpuScore"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="15dp"
+        android:layout_above="@+id/gridLayout"
         android:layout_marginLeft="10dp"
-        android:layout_marginStart="58dp"
-        android:text="0"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:textColor="@android:color/white"
-        android:textSize="15sp" />
+        android:layout_marginRight="10dp"
+        android:orientation="horizontal">
 
-    <TextView
-        android:id="@+id/playerScoreText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="15dp"
-        android:layout_marginLeft="50dp"
-        android:layout_marginStart="58dp"
-        android:text="PLAYER:"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:textColor="@android:color/white"
-        android:textSize="15sp" />
+        <Button
+            android:id="@+id/restartButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:onClick="restart"
+            android:padding="0dp"
+            android:text="restart"
+            android:textColor="#FFFFFF"
+            android:textSize="15sp" />
 
-    <TextView
-        android:id="@+id/playerScore"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="15dp"
-        android:layout_marginLeft="10dp"
-        android:layout_marginStart="58dp"
-        android:text="0"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:textColor="@android:color/white"
-        android:textSize="15sp" />
+        <TextView
+            android:id="@+id/cpuScoreText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="15dp"
+            android:layout_marginLeft="50dp"
+            android:layout_marginStart="58dp"
+            android:text="CPU:"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="@android:color/white"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/cpuScore"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="15dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginStart="58dp"
+            android:text="0"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="@android:color/white"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/playerScoreText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="15dp"
+            android:layout_marginLeft="50dp"
+            android:layout_marginStart="58dp"
+            android:text="PLAYER:"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="@android:color/white"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/playerScore"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="15dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginStart="58dp"
+            android:text="0"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="@android:color/white"
+            android:textSize="15sp" />
     </LinearLayout>
 
     <GridLayout
@@ -83,85 +85,93 @@
         android:columnCount="3"
         android:rowCount="3">
 
-        <Button
+        <ImageButton
             android:id="@+id/button1"
-            android:layout_width="105dp"
             android:layout_height="105dp"
             android:layout_margin="1dp"
-            android:background="#4DB6AC"
-            android:text=""
-            android:textSize="15sp" />
+            android:adjustViewBounds="true"
+            android:padding="0dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/blanktile" />
 
-        <Button
+        <ImageButton
             android:id="@+id/button2"
             android:layout_width="105dp"
             android:layout_height="105dp"
             android:layout_margin="1dp"
-            android:background="#4DB6AC"
-            android:text=""
-            android:textSize="15sp" />
+            android:adjustViewBounds="true"
+            android:padding="0dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/blanktile" />
 
-        <Button
+        <ImageButton
             android:id="@+id/button3"
             android:layout_width="105dp"
             android:layout_height="105dp"
             android:layout_margin="1dp"
-            android:background="#4DB6AC"
-            android:text=""
-            android:textSize="15sp" />
+            android:adjustViewBounds="true"
+            android:padding="0dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/blanktile" />
 
-        <Button
+        <ImageButton
             android:id="@+id/button4"
             android:layout_width="105dp"
             android:layout_height="105dp"
             android:layout_margin="1dp"
-            android:background="#4DB6AC"
-            android:text=""
-            android:textSize="15sp" />
+            android:adjustViewBounds="true"
+            android:padding="0dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/blanktile" />
 
-        <Button
+        <ImageButton
             android:id="@+id/button5"
             android:layout_width="105dp"
             android:layout_height="105dp"
             android:layout_margin="1dp"
-            android:background="#4DB6AC"
-            android:text=""
-            android:textSize="15sp" />
+            android:adjustViewBounds="true"
+            android:padding="0dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/blanktile" />
 
-        <Button
+        <ImageButton
             android:id="@+id/button6"
             android:layout_width="105dp"
             android:layout_height="105dp"
             android:layout_margin="1dp"
-            android:background="#4DB6AC"
-            android:text=""
-            android:textSize="15sp" />
+            android:adjustViewBounds="true"
+            android:padding="0dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/blanktile" />
 
-        <Button
+        <ImageButton
             android:id="@+id/button7"
             android:layout_width="105dp"
             android:layout_height="105dp"
             android:layout_margin="1dp"
-            android:background="#4DB6AC"
-            android:text=""
-            android:textSize="15sp" />
+            android:adjustViewBounds="true"
+            android:padding="0dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/blanktile" />
 
-        <Button
+        <ImageButton
             android:id="@+id/button8"
             android:layout_width="105dp"
             android:layout_height="105dp"
             android:layout_margin="1dp"
-            android:background="#4DB6AC"
-            android:text=""
-            android:textSize="15sp" />
+            android:adjustViewBounds="true"
+            android:padding="0dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/blanktile" />
 
-        <Button
+        <ImageButton
             android:id="@+id/button9"
             android:layout_width="105dp"
             android:layout_height="105dp"
             android:layout_margin="1dp"
-            android:background="#4DB6AC"
-            android:text=""
-            android:textSize="15sp" />
+            android:adjustViewBounds="true"
+            android:padding="0dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/blanktile" />
     </GridLayout>
 </RelativeLayout>
