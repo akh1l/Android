@@ -1,5 +1,6 @@
 package com.example.akh1l.tictactoe;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -62,8 +63,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
+        if (id == R.id.twoPlayers) {
+            Intent twoPlayersIntent = new Intent (this, TwoPlayers.class);
+            startActivity(twoPlayersIntent);
         }
         return super.onOptionsItemSelected(item);
     }
@@ -92,13 +94,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 else{
                     ImageButton button2 = (ImageButton) findViewById(R.id.button2);
                     if(win == 1)
-                {
-                    button2.setImageResource(R.drawable.owhite);
-                }
-                else
-                {
-                    button2.setImageResource(R.drawable.oblack);
-                }
+                    {
+                        button2.setImageResource(R.drawable.owhite);
+                    }
+                    else
+                    {
+                        button2.setImageResource(R.drawable.oblack);
+                    }
                 }
                 break;
             case R.id.button3:
@@ -237,14 +239,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             ImageButton button = (ImageButton) findViewById(id);
             button.setImageResource(R.drawable.xblack);
             playerOccupied[idLocation] = 1;  //setting that tile as players tile
-            if (playerCheck() == false) {
+            if (!playerCheck()) {
                 if (cpuOccupiedCount < 4 && (win == 0))   //maximum tiles that can be occupied by the cpu && cpu has not won yet
                 {
                     androidsTurn();
                 }
             } else {
                 playerScore++;
-                displayPlayerScore(playerScore);
+                //displayPlayerScore(playerScore);
                 for (int i = 0; i < 9; i++) {
                     if (playerOccupied[i] == 0) {
                         playerOccupied[i] = 1;
@@ -259,6 +261,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         int id = -1;
         boolean specialBlock = false;
         int cpuPressed = 0;
+
         if (cpuOccupiedCount == 1) {
             id = specialBlock1();
             if (id != -1) {
@@ -282,18 +285,18 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     cpuOccupied[k] = 1;
                 }
             }
-       } else if (cpuPressed == 0 && win == 0) {
-           id = cpuBlock();
+        } else if (cpuPressed == 0 && win == 0) {
+            id = cpuBlock();
         }
         if (block == 0 && cpuPressed == 0) {
             specialBlock = superBlock();
         }
         if (specialBlock) {
             for (; ; ) {
-                int specialnNumber = randomGenerator.nextInt(9);
-                if (playerOccupied[specialnNumber] != 1 && cpuOccupied[specialnNumber] != 1 && specialnNumber % 2 == 1) {
-                    id = idArray[specialnNumber];
-                    cpuOccupied[specialnNumber] = 1;
+                int specialNumber = randomGenerator.nextInt(9);
+                if (playerOccupied[specialNumber] != 1 && cpuOccupied[specialNumber] != 1 && specialNumber % 2 == 1) {
+                    id = idArray[specialNumber];
+                    cpuOccupied[specialNumber] = 1;
                     cpuOccupiedCount++;
                     break;
                 }
@@ -324,12 +327,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 }
             }
         }
+
         if (id != -1) {
             ImageButton button = (ImageButton) findViewById(id);
             playerIdentification = 0;
             button.performClick();
             playerIdentification = 1;
         }
+
     }
 
     public int cpuWin() {
@@ -480,7 +485,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     return true;
                 }
                 if (j == 0) {
-                    i++;    //for coloumn
+                    i++;    //for column
                 } else if (j == 1) {
                     i += 3;    //for row
                 } else {
@@ -545,14 +550,18 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
         return id;
     }
-
     public void displayCpuScore(int score) {
-        TextView quantityTextView = (TextView) findViewById(R.id.cpuScore);
-        quantityTextView.setText("" + score);
+
+        TextView quantityTextView = (TextView) findViewById(R.id.cpuScoreText);
+        //gets the string from the TextView and then gets rid of the last character, which is replaced with the new score in the next line
+        String scoreModified = quantityTextView.getText().toString().substring(0,quantityTextView.getText().toString().length()- 1 );
+        quantityTextView.setText(scoreModified + score);
     }
 
     public void displayPlayerScore(int score) {
-        TextView quantityTextView = (TextView) findViewById(R.id.playerScore);
-        quantityTextView.setText("" + score);
+        TextView quantityTextView = (TextView) findViewById(R.id.playerScoreText);
+        //gets the string from the TextView and then gets rid of the last character, which is replaced with the new score in the next line
+        String scoreModified = quantityTextView.getText().toString().substring(0,quantityTextView.getText().toString().length()- 1 );
+        quantityTextView.setText(scoreModified + score);
     }
 }
